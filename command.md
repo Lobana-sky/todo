@@ -13,20 +13,22 @@ near dev-deploy
 
 ------------------------------------------------------------------------------------------
 
-near view dev-1621374224571-7295251 sayHi
+near view dev-1621375202594-6539728 sayHi
 
-near call dev-1621374224571-7295251 showMyTasks --account_id lobana.testnet 
+near call dev-1621375202594-6539728 showMyTasks --account_id lobana.testnet 
 
-near call dev-1621374224571-7295251 addToMyList '{"task":"wake up morning"}' --account_id lobana.testnet
+near call dev-1621375202594-6539728 addToMyList '{"task":"wake up morning"}' --account_id lobana.testnet
 
-near call dev-1621374224571-7295251 addToMyList '{"task":"at 7 am"}' --account_id lobana.testnet
+near call dev-1621375202594-6539728 addToMyList '{"task":"at 7 am"}' --account_id lobana.testnet
 
-near call dev-1621374224571-7295251 addToMyList '{"task":"prayer"}' --account_id lobana.testnet
+near call dev-1621375202594-6539728 addToMyList '{"task":"prayer"}' --account_id lobana.testnet
 
-near call dev-1621374224571-7295251 addToMyList '{"task":"coding"}' --account_id lobana.testnet
+near call dev-1621375202594-6539728 addToMyList '{"task":"coding"}' --account_id lobana.testnet
 
-near call dev-1621374224571-7295251 deleteTask '{"task":1}' --account_id lobana.testnet
+near call dev-1621375202594-6539728 showMyTasks --account_id lobana.testnet 
 
-near call dev-1621374224571-7295251 showMyTasks --account_id lobana.testnet 
+near call dev-1621375202594-6539728 deleteTask '{"task":1}' --account_id lobana.testnet
 
-near call dev-1621374224571-7295251 getNumTasks --account_id lobana.testnet 
+near call dev-1621375202594-6539728 showMyTasks --account_id lobana.testnet 
+
+near call dev-1621375202594-6539728 getNumTasks --account_id lobana.testnet 
