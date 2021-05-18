@@ -1,9 +1,8 @@
 import { context,
   logging,
   storage,
-  u128,
-  PersistentSet,
-  PersistentVector } from "near-sdk-as";
+  PersistentVector 
+} from "near-sdk-as";
 
   export function sayHi(): bool {
    logging.log("HIIIIIIIIIII");
@@ -12,22 +11,10 @@ import { context,
  }
 
   export function greeting(): string {
- logging.log("sayHello() was called");
 
- return "Hello!" + context.sender + "!";
+  return "Hello!" + context.sender + "!";
 }
 
-export function sayMyName(): string {
- logging.log("sayMyName() was called");
-
- return "Hello, " + context.sender + "!";
-}
-
-export function saveMyName(): void {
- logging.log("saveMyName() was called");
-
- storage.setString("last_sender", context.sender);
-}
 
 export class Task {
  taskText: string = 'new task';
