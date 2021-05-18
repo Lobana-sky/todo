@@ -7,9 +7,7 @@ echo \$OWNER is $OWNER
 echo
 
 # these functions are all "view" functions so they don't require a signature
-near view $CONTRACT showYouKnow     # this one returns false (function return value is void)
-near view $CONTRACT showYouKnow2    # this one returns true
-# near view $CONTRACT sayHello --account_id $OWNER       # this one returns a literal string
+near view $CONTRACT sayHi --account_id $OWNER
 
 # ------------------------
 # the next method uses a host function to retrieve the caller's name so it needs to be a CHANGE function (using "call" here)
@@ -18,6 +16,7 @@ near view $CONTRACT showYouKnow2    # this one returns true
 # near view $CONTRACT sayMyName
 # ----
 # so this is the solution, to replace "view" with "call" and include a signer
+near call $CONTRACT greeting --account_id $OWNER
 near call $CONTRACT sayHello --account_id $OWNER       # this one returns a literal string
 
 near call $CONTRACT sayMyName --account_id $OWNER
@@ -35,7 +34,7 @@ near call $CONTRACT saveMyName --account_id $OWNER
 near call $CONTRACT addToMyList '{"task":"new task"}' --account_id $OWNER
 near call $CONTRACT deleteTask '{"task":1}' --account_id $OWNER
 
-near call $CONTRACT getAllMessages --account_id $OWNER
+near call $CONTRACT showMyTasks --account_id $OWNER
 near call $CONTRACT getNumTasks --account_id $OWNER
 
 # ------------------------
