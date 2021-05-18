@@ -10,7 +10,7 @@ import {
    return true;
  }
 
-  export function greeting(): string {
+  export function greetingUser(): string {
 
   return "Hello " + context.sender + " !";
 }

@@ -8,7 +8,7 @@ echo
 
 near view $CONTRACT sayHi
 
-near call $CONTRACT greeting --account_id $OWNER
+near call $CONTRACT greetingUser --account_id $OWNER
 
 # ------------------------
 

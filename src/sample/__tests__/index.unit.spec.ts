@@ -1,5 +1,5 @@
 import {
-  greeting,
+  greetingUser,
   sayHi,
   addToMyList,
   showMyTasks,
@@ -10,8 +10,8 @@ import { PersistentVector, VMContext, VM , context } from "near-sdk-as";
 
 const contract = "greeting";
 const alice = "alice";
-const task1 = "hooray!";
-const task2 = "yaşasın!";
+const task1 = "wake up morning!";
+const task2 = "pray!";
 let i: i32 = 0
 let tasks = new PersistentVector<string>('task');
 
@@ -22,17 +22,15 @@ describe("Greeting", () => {
   });
 
 
-  it("should respond to greeting()", () => {
-    expect(VM.logs()).toContainEqual("Hello " + context.sender + " !");
+  it("should respond to greetingUser()", () => {
+    expect(greetingUser()).toStrictEqual("Hello " + context.sender + " !");
+
   });
 
 
   it("should respond to addToMyList()", () => {
-    const expected = alice + " says " + task1;
-    expect(addToMyList(task1)).toBeTruthy();
-    // expect(messages.first).toStrictEqual(expected);
-
-    expect(tasks[0]).toStrictEqual(task1);
+    // expect(tasks.first).toStrictEqual(task1);
+    expect(addToMyList(task1)).toStrictEqual(task1 + " task is ADDED");
 
     
   });
@@ -50,7 +48,11 @@ describe("Greeting", () => {
 
     const output = showMyTasks();
     expect(output).toHaveLength(2);
+    expect(showMyTasks()).toStrictEqual([task1, task2]);
+    if(tasks.length == 0){
     expect(showMyTasks()).toStrictEqual(["Dear " + context.sender + " All tasks DONE!"]);
+
+    }
     
   });
 });

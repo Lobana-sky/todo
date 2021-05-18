@@ -15,6 +15,8 @@ near dev-deploy
 
 near view dev-1621375202594-6539728 sayHi
 
+near call dev-1621375202594-6539728 greetingUser --account_id lobana.testnet 
+
 near call dev-1621375202594-6539728 showMyTasks --account_id lobana.testnet 
 
 near call dev-1621375202594-6539728 addToMyList '{"task":"wake up morning"}' --account_id lobana.testnet
