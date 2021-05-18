@@ -32,3 +32,9 @@ near call dev-1621375202594-6539728 deleteTask '{"task":1}' --account_id lobana.
 near call dev-1621375202594-6539728 showMyTasks --account_id lobana.testnet 
 
 near call dev-1621375202594-6539728 getNumTasks --account_id lobana.testnet 
+
+
+
+--------------------------------------------------------------------------------------------
+
+yarn test:unit

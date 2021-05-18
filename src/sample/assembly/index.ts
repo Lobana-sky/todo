@@ -1,6 +1,6 @@
-import { context,
+import { 
+  context,
   logging,
-  storage,
   PersistentVector 
 } from "near-sdk-as";
 
@@ -12,7 +12,7 @@ import { context,
 
   export function greeting(): string {
 
-  return "Hello!" + context.sender + "!";
+  return "Hello " + context.sender + " !";
 }
 
 
@@ -63,6 +63,5 @@ export function deleteTask(task: i32): string {
 export function getNumTasks(): String {
  return "Hello "+ context.sender +  ", You have " + tasks.length.toString()
   + " tasks for today!";
-
 
 }
