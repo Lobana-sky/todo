@@ -1,3 +1,4 @@
+set -e
 
 near view dev-1622125962236-5124564 sayHi
 
