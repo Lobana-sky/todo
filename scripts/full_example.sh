@@ -1,3 +1,4 @@
+
 near view dev-1622125962236-5124564 sayHi
 
 near call dev-1622125962236-5124564 greetingUser --account_id lobana.testnet 

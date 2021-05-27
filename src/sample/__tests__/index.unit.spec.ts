@@ -3,7 +3,6 @@ import {
   sayHi,
   addToMyList,
   showMyTasks,
-  deleteTask,
   getNumTasks,
 } from "../assembly";
 import { PersistentVector, VMContext, VM , context } from "near-sdk-as";
@@ -21,6 +20,11 @@ describe("greeting", () => {
     VMContext.setSigner_account_id(alice);
   });
 
+  it("should respond to sayHi()", () => {
+    expect(sayHi()).toBeTruthy();//output for boolean function
+    expect(VM.logs()).toContainEqual("HIIIIIIIIIII");//print stuff
+
+  });
 
   it("should respond to greetingUser()", () => {
     expect(greetingUser()).toStrictEqual("Hello " + context.sender + " !");
@@ -29,18 +33,17 @@ describe("greeting", () => {
 
 
   it("should respond to addToMyList()", () => {
-    // expect(tasks.first).toStrictEqual(task1);
     expect(addToMyList(task1)).toStrictEqual(task1 + " task is ADDED");
 
-    
   });
+ 
   
   it("should respond to getNumTasks()", () => {
     expect(getNumTasks()).toStrictEqual("Hello " + context.sender + ", You have " + 
     tasks.length.toString() + " tasks for today!");
-
       
   });
+
 
   it("should respond to showMyTasks()", () => {
     tasks.push(task1)
