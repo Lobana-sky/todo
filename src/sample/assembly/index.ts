@@ -15,27 +15,28 @@ export function greetingUser(): string {
   return "Hello " + context.sender + " !";
 }
 
+//listTODO 'task' 
 let tasks = new PersistentVector<string>('task');
 
+//add a new task to tasklist
 export function addToMyList(task: string): string {
-
- assert(task.length > 0, "Task can not be blank.");
- tasks.push(task);
- return task.toString() + " task is ADDED";
+  assert(task.length > 0, "Task can not be blank.");
+  tasks.push(task);
+  return task.toString() + " task is ADDED";
 }
 
+//to show all my tasks return
 export function showMyTasks(): Array<string> {
-
- let listToPrint = new Array<string>();
- let i: i32 = 0;
- if(tasks.length == 0){
- listToPrint.push("Dear " + context.sender + " All tasks DONE!")
- }
- while (i < tasks.length) {
- listToPrint.push(tasks[i])
- i++
- }
- return listToPrint;
+  let listToPrint = new Array<string>();
+  let i: i32 = 0;
+  if(tasks.length == 0){
+    listToPrint.push("Dear " + context.sender + " All tasks DONE!")
+  }
+  while (i < tasks.length) {
+    listToPrint.push(tasks[i])
+    i++
+  }
+  return listToPrint;
 }
 
 export function deleteTask(task: i32): string {
@@ -46,12 +47,11 @@ export function deleteTask(task: i32): string {
    return "The " + task.toString() + " task is DELETED";
  }
  return "There is No tasks to delete";
- 
 }
 
 export function getNumTasks(): String {
- return "Hello "+ context.sender +  ", You have " + tasks.length.toString()
-  + " tasks for today!";
+  return "Hello "+ context.sender +  ", You have " + tasks.length.toString()
+    + " tasks for today!";
 
 }
 
