@@ -4,26 +4,15 @@ import {
   PersistentVector 
 } from "near-sdk-as";
 
-  export function sayHi(): bool {
+//print hi without context.sender so need view
+export function sayHi(): bool {
    logging.log("HIIIIIIIIIII");
- 
    return true;
- }
+}
 
-  export function greetingUser(): string {
-
+//print hi with context.sender so need call
+export function greetingUser(): string {
   return "Hello " + context.sender + " !";
-}
-
-
-export class Task {
- taskText: string = 'new task';
- done: boolean = true;
-
- constructor(taskText: string, done: bool) {
-   taskText = this.taskText;
-   done = this.done; 
-}
 }
 
 let tasks = new PersistentVector<string>('task');
@@ -65,3 +54,15 @@ export function getNumTasks(): String {
   + " tasks for today!";
 
 }
+
+
+
+export class Task {
+  taskText: string = 'new task';
+  done: boolean = true;
+  constructor(taskText: string, done: bool) {
+    taskText = this.taskText;
+    done = this.done; 
+   }
+ }
+ 
