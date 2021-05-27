@@ -11,11 +11,11 @@ import { PersistentVector, VMContext, VM , context } from "near-sdk-as";
 const contract = "greeting";
 const alice = "alice";
 const task1 = "wake up morning!";
-const task2 = "pray!";
+const task2 = "codeing";
 let i: i32 = 0
 let tasks = new PersistentVector<string>('task');
 
-describe("Greeting", () => {
+describe("greeting", () => {
   beforeEach(() => {
     VMContext.setCurrent_account_id(contract);
     VMContext.setSigner_account_id(alice);
