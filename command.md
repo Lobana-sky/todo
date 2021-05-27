@@ -1,17 +1,21 @@
-npx create-near-app todo
+*************************************************
 
-yarn install
+1- npx create-near-app todo
 
-yarn dev
+2- yarn install
 
-yarn build:release
+3- yarn dev
 
-near dev-deploy 
+4- yarn build:release
+
+5- near dev-deploy 
+
+
+or run ./scripts/build.sh instead of 4,5
 
 
 
-
-------------------------------------------------------------------------------------------
+*************************************************
 
 near view dev-1621375202594-6539728 sayHi
 
