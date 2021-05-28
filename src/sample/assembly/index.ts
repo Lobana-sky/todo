@@ -56,6 +56,19 @@ export function getNumTasks(): String {
 }
 
 
+// export function clearTasks(): string {
+//   let i: i32 = 0;
+//   logging.log(tasks.length);
+
+//   while (i < tasks.length) {
+//     tasks.popBack();
+//     logging.log(i);
+//     i++
+//   }
+//   return context.sender +  " All your TASKS is DELETED";
+
+// }
+
 
 export class Task {
   taskText: string = 'new task';
