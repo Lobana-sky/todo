@@ -1,6 +1,4 @@
 
-near delete $CONTRACT $OWNER
-
 echo --------------------------------------------
 echo
 echo "cleaning up the /neardev folder"

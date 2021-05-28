@@ -33,8 +33,10 @@ describe("greeting", () => {
 
 
   it("should respond to addToMyList()", () => {
+    if(task1.length == 0){
+      expect(addToMyList(task1)).toStrictEqual("Task can not be blank.");
+    }
     expect(addToMyList(task1)).toStrictEqual(task1 + " task is ADDED");
-
   });
  
   
