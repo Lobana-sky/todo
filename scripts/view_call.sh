@@ -1,7 +1,7 @@
 set -e
 
 # ------------------------
-near view todo sayHi
+near view $CONTRACT sayHi
 
 # ------------------------
 near call $CONTRACT greetingUser --account_id $OWNER

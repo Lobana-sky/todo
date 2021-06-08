@@ -13,6 +13,16 @@
 
 or run ./scripts/build.sh instead of 4,5
 
+near dev-deploy will create a temporary account id on which the contract can we deploy
+
+after got that temporary account id ex:dev-1623122119865-7322615 type
+
+export CONTRACT=dev-1623122119865-7322615
+
+export OWNER=lobana.testnet
+
+then run ./scripts/view_call.sh
+
 
 
 *************************************************
